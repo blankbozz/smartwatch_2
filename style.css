@@ -15,7 +15,7 @@ body {
     background-color: red;
     width: 400px;
     height: 400px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .center {
@@ -34,6 +34,7 @@ body {
 }
 
 .watch::after {
+    content: "";
     background-color: #242424;
     width: 230px;
     height: 230px;
@@ -45,13 +46,62 @@ body {
 }
 
 .circle {
-    background-color: yellow;
+    background-color: black;
+    position: absolute;
     box-sizing: border-box;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(50%, -50%);
+    transform: translate(-50%, -50%);
+    border: white dotted;
+}
+
+svg {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+circle {
+    fill: transparent;
+    stroke: #d95050;
+    stroke-width: 2px;
+    stroke-dasharray: 700;
+    animation: spin 2s infinite linear;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+}
+
+.clock {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.date {
+    font-size: 15px;
+    margin: auto;
+}
+
+.time {
+    font-size: 36px;
+    font-weight: bold;
 }
