@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -12,88 +13,74 @@ body {
 }
 
 .box {
-    background-color: red;
-    width: 400px;
-    height: 400px;
+    /* background-color: red; */
+    width: 450px;
+    height: 450px;
     overflow: hidden;
 }
 
 .center {
-    background-color: blue;
+    /* background-color: blue; */
     position: absolute;
-    top: 50%;
+    width: 400px;
+    height: 400px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-50%, -50%)
 }
 
 .watch {
+    position: absolute;
     background-color: #424242;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 16px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.watch::after {
-    content: "";
-    background-color: #242424;
-    width: 230px;
-    height: 230px;
-    border-radius: 16px;
+.watch-2 {
     position: absolute;
-    top: 50%;
+    background-color: #242424;
+    width: 270px;
+    height: 270px;
+    border-radius: 16px;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .circle {
-    background-color: black;
+    background-color: #242424;
     position: absolute;
     box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: white dotted;
-}
-
-svg {
-    position: absolute;
-    width: 220px;
-    height: 220px;
+    border: white;
+    border-style: dotted;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-circle {
-    fill: transparent;
-    stroke: #d95050;
-    stroke-width: 2px;
-    stroke-dasharray: 700;
-    animation: spin 2s infinite linear;
-    transform-origin: center center;
-    transform: rotate(-90deg);
-}
 
 .clock {
     position: absolute;
-    text-align: center;
     width: 150px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 12px;
-    text-transform: uppercase;
-    color: white;
-    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .date {

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    background-color: red;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.center {
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.watch {
+    background-color: #424242;
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
+}
+
+.watch-2 {
+    background-color: #242424;
+    width: 230px;
+    height: 230px;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    background-color: black;
+    position: absolute;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: white;
+    border-style: dotted;
+}
+
+svg {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+circle {
+    fill: transparent;
+    stroke: #d95050;
+    stroke-width: 2px;
+    stroke-dasharray: 700;
+    animation: spin 2s infinite linear;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+}
+
+.clock {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.date {
+    font-size: 15px;
+    margin: auto;
+}
+
+.time {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+i {
+    color: red;
+    animation: beat 1s infinite;
+}
+
+@keyframes spin {
+    0% {
+        stroke-dashoffset: 700;
+        transform: rotate(-90deg) scaleY(1);
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        transform: rotate(-90deg) scaleY(1);
+    }
+
+    50.1% {
+        transform: rotate(-90deg) scaleY(-1);
+    }
+
+    100% {
+        stroke-dashoffset: 700;
+        transform: rotate(-90deg) scaleY(-1);
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
